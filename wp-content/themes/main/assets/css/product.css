@@ -1,0 +1,146 @@
+
+
+  .web__grid-product{
+    display: grid;
+    gap: 30px;
+  }
+
+  .web__grid-post{
+    display: grid;
+    gap: 30px;
+  }
+
+  @media (min-width: 768px) {
+    .web__grid-product{
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .web__grid-post{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .web__grid-product{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .web__grid-post{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .web__grid-product{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .web__grid-post{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  .web-grid-product__item{
+    border-radius: 7px 7px 0 0;
+    border: 1px solid var(--cl_b);
+
+  }
+
+  .web-grid-post__item{
+    border: 10px solid white;
+
+  }
+
+  .web-grid-product__item-thumnail-fram{
+    height: 222px;
+  }
+
+  .web-grid-product__item-thumnail{
+    height: 222px;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+  }
+
+  .web-grid-product__item-title{
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 10px;
+    line-height: 22px;
+    height: 52px;
+    overflow: hidden;
+  }
+
+  .web-grid-post__item-thumnail-fram{
+    height: 300px;
+  }
+
+  .web-grid-post__item-thumnail{
+    height: 300px;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+  }
+
+  .web-grid-post__item-title{
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 0;
+    line-height: 22px;
+    height: 36px;
+    overflow: hidden;
+  }
+
+  .web-grid-post__item-desc{
+    display: block;
+    font-size: 14px;
+    padding: 10px 0;
+    line-height: 17px;
+    height: 41px;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.747);
+  }
+
+  .web-grid-product__item-book{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .web-grid-product-item-book__link{
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: var(--cl_1);
+    color: white;
+    border-radius: 5px;
+  }
+
+  .web-grid-product-item-book__price-value{
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .web-section__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .web-section-slide__nav{
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .web-section-slide__nav-btn{
+    width: 40px;
+  }
+
+  .web-section-slide__nav-btn:hover{
+    background-color: rgba(218, 218, 218, 0.747);
+    border-radius: 5px;
+    cursor: pointer;
+  }

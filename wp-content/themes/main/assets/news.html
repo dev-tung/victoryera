@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <title>Victory Era Travel Company</title>
+    
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/define.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+
+      @media (min-width: 768px) {
+        .web__grid-news{
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .web__grid-news{
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .web__grid-news{
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      .card{
+        border: 1px solid rgb(214, 214, 214);
+      }
+
+      .card__info .card__info--column{
+        padding: 10px;
+      }
+
+      .card__frame{
+        margin-bottom: 5px;
+        height: 300px;
+      }
+
+      .card__thumnail{
+        height: 300px;
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+      }
+
+
+      .card-desc{
+        display: block;
+        font-size: 14px;
+        padding: 10px 0;
+        line-height: 17px;
+        height: 60px;
+        overflow: hidden;
+        color: rgba(0, 0, 0, 0.747);
+      }
+
+      .card__date{
+        margin-top: 5px;
+        color: rgba(0, 0, 0, 0.37);
+      }
+
+      .card__cate{
+        opacity: 0.7;
+      }
+
+      .news-popular{
+        display: flex;
+        gap: 30px;
+      }
+
+      .news-popular__single{
+        width: calc(90% - 30px);
+        position: relative;
+        line-height: 24px;
+      }
+
+      .news-popular__content{
+        position: absolute;
+        bottom: 0;
+        padding: 30px;
+      }
+
+      .card__title--white,
+      .card__date--white,
+      .card__cate--white{
+        color: white;
+      }
+
+      .news-popular__rows{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 15px;
+      }
+
+      @media (max-width: 1200px) {
+        .news-popular{
+          display: flex;
+          flex-direction: column;
+        }
+
+        .news-popular__single{
+          width: 100%;
+        }
+
+        .news-popular__rows{
+          width: 100%;
+        }
+
+      }
+
+      .news-popular-item{
+        display: flex;
+        gap: 15px;
+        border: 1px solid rgb(238, 237, 237);
+        padding: 15px;
+      }
+
+      .news-popular-item__thumnail{
+        background-image: url('img/news/news-thumnail.png');
+        width: 90px;
+        height: 90px;
+      }
+
+      .news-popular-item__content{
+        width: calc(80% - 15px);
+      }
+
+      @media (max-width: 768px) {
+        .news-popular-item__thumnail{
+          width: 30%;
+        }
+
+        .news-popular-item__content{
+          width: calc(70% - 15px);
+        }
+      }
+
+      .news__title{
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 35px;
+      }
+
+      .news__category{
+        display: block;
+        margin: 15px 0;
+        font-size: 20px;
+        color: var(--cl_5);
+      }
+
+      .news__mainimg{
+        width: 100%;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="web">
+      <header class="header" id="header">
+        <div class="container">
+          <div class="header__top">
+            <div class="header-icons">
+              <img class="header-icons__logo" src="img/header/Logo.png" alt="img/header/Logo.png"/>
+              <img class="header-icons__bar" id="header-icons__bar" src="img/icon/bar.png" alt="img/icon/close.png">
+              <img class="header-icons__cls" id="header-icons__cls" src="img/icon/close.png" alt="img/icon/close.png">
+            </div>
+            <div class="header__menu" id="header__menu">
+              <nav class="header-nav" id="header-nav">
+                <a class="header-nav__link header-nav__link--active" href="#">Home</a>
+                <div class="header-nav__group">
+                  <a class="header-nav__link" href="#">Tours in Vietnam</a>
+                  <nav class="header-nav__sub">
+                    <a class="header-nav__link" href="#">Vietname Package</a>
+                    <a class="header-nav__link" href="#">Southen Tour</a>
+                    <a class="header-nav__link" href="#">Nothern Tour</a>
+                    <a class="header-nav__link" href="#">Central Tour</a>
+                  </nav>
+                </div>
+
+                <a class="header-nav__link" href="#">Travel Guide</a>
+                <a class="header-nav__link" href="#">Booking Policy</a>
+                <a class="header-nav__link" href="#">Hotline +84867032865</a>
+              </nav>
+              <form class="header-search">
+                <input class="header-search__input" type="text" placeholder="Where do you want to go?">
+                <img class="header-search__icon" src="img/header/search-icon.png" alt="search-icon.png">
+              </form>
+            </div>
+          </div>
+          <div class="header-banner">
+            <h1 class="header-banner__title">Victory Era Travel Company</h1>
+            <p class="header-banner__text">Your journey - Our mision</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="body body--news">
+        <section class="section">
+          <div class="container">
+            <div class="news-popular">
+              <div class="news-popular__single">
+                <h2 class="news__title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, quis.</h2>
+                <span class="news__category">Ha Long</span>
+                <!-- <img class="news__mainimg" src="img/product/hoian.jpg" alt=""> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloribus eaque laborum. Tempora vero quos commodi, mollitia doloribus cum unde voluptate voluptates consequuntur, voluptatem facere earum ipsam debitis id veniam ullam. Maxime iste quo, odio, laudantium a et exercitationem illum praesentium reiciendis esse minus debitis, sit eius voluptatem facilis magni nostrum! Accusantium cupiditate repellat harum neque odio repudiandae, sed eos quaerat iusto id ullam recusandae veniam aut repellendus corporis, obcaecati animi rerum nobis debitis fugit. Enim ea modi saepe neque iure cupiditate tempore sint deserunt, est soluta earum, eligendi maxime odit illo quasi explicabo asperiores qui natus quo eius libero!</p>
+              </div>
+              <div class="news-popular__rows">
+                <h2 class="section__title">Recent Post</h2>
+                <div class="news-popular-item">
+                  <div class="news-popular-item__thumnail"></div>
+                  <div class="news-popular-item__content">
+                    <span class="card__cate">Ha Long</span>
+                    <h3 class="card__title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, odio?</h3>
+                    <span class="card__date">28-May</span>
+                  </div>
+                </div>
+                <div class="news-popular-item">
+                  <div class="news-popular-item__thumnail"></div>
+                  <div class="news-popular-item__content">
+                    <span class="card__cate">Ha Long</span>
+                    <h3 class="card__title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, odio?</h3>
+                    <span class="card__date">28-May</span>
+                  </div>
+                </div>
+                <div class="news-popular-item">
+                  <div class="news-popular-item__thumnail"></div>
+                  <div class="news-popular-item__content">
+                    <span class="card__cate">Ha Long</span>
+                    <h3 class="card__title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, odio?</h3>
+                    <span class="card__date">28-May</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+
+          <div class="footer-map">
+            <iframe class="footer-map__iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Vinhome%20ocearn%20park+(Victory%20Era%20Travel%20Company)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+              <a href="https://www.gps.ie/">gps trackers</a>
+            </iframe>
+            <p class="footer__text text-center">Copyright © 2024 Victory Era Travel Company</p>
+          </div>
+  
+          <div class="footer-info">
+            <div class="footer-info__company">
+              <h3 class="footer-info__h3">Victory Era Travel Company</h3>
+              <p class="footer__text">Address: Vinhomes Ocean Park, Gia Lâm, Hanoi Lorem ipsum dolor sit amet.</p>
+            </div>
+            <section class="footer__links">
+              <nav class="footer-nav">
+                <a href="#" class="footer-nav__link">Phone: +84867032865</a>
+                <a href="#" class="footer-nav__link">Email: booking@victorytravel.info</a>
+                <a href="#" class="footer-nav__link">Work Time: Mon-Sun 8:00 - 21:00</a>
+                <div class="footer__social">
+                  <a href="#"><img class="footer__social-item" src="img/footer/social1.png" alt="social1.png"></a>
+                  <a href="#"><img class="footer__social-item" src="img/footer/social2.png" alt="social2.png"></a>
+                  <a href="#"><img class="footer__social-item" src="img/footer/social3.png" alt="social3.png"></a>
+                  <a href="#"><img class="footer__social-item" src="img/footer/social4.png" alt="social4.png"></a>
+                  <a href="#"><img class="footer__social-item" src="img/footer/social5.png" alt="social5.png"></a>
+                </div>
+              </nav>
+              <nav class="footer-nav">
+                <a href="#" class="footer-nav__link">Vietnam package</a>
+                <a href="#" class="footer-nav__link">Northern Vietnam</a>
+                <a href="#" class="footer-nav__link">Central Vietnam</a>
+                <a href="#" class="footer-nav__link">Southern Vietnam</a>
+              </nav>
+              <nav class="footer-nav">
+                <a href="#" class="footer-nav__link">Home</a>
+                <a href="#" class="footer-nav__link">About Us</a>
+                <a href="#" class="footer-nav__link">Travel Guide</a>
+                <a href="#" class="footer-nav__link">Booking Policy</a>
+              </nav>
+            </section>
+            <section class="footer-payment">
+              <img class="footer-payment__item" src="img/footer/payment1.png" alt="payment1.png">
+              <img class="footer-payment__item" src="img/footer/payment2.png" alt="payment2.png">
+              <img class="footer-payment__item" src="img/footer/payment3.png" alt="payment3.png">
+              <img class="footer-payment__item" src="img/footer/payment4.png" alt="payment4.png">
+            </section>
+          </div>
+        </div>
+
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('web-header__img-bar').onclick = () => {
+          document.getElementById('web__header').classList.add("web__header--menu-mobile");
+          document.getElementById('web-header__img-bar').style.display = "none";
+          document.getElementById('web-header__topbar-right').style.display = "block";
+          document.getElementById('web-header__img-cls').style.display = "block";
+      }
+
+      document.getElementById('web-header__img-cls').onclick = () => {
+          document.getElementById('web__header').classList.remove("web__header--menu-mobile");
+          document.getElementById('web-header__img-bar').style.display = "block";
+          document.getElementById('web-header__topbar-right').style.display = "none";
+          document.getElementById('web-header__img-cls').style.display = "none";
+      }
+    </script>
+
+  </body>
+</html>

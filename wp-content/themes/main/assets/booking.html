@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>Victory Era Travel Company</title>
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/define.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/button.css" />
+  </head>
+  <body>
+    <div class="web web--invert" id="web">
+      <header class="header" id="header">
+        <div class="container">
+          <div class="header__top">
+            <div class="header-icons">
+              <a href="http://victoryeratravel.local/">
+                <img class="header-icons__logo" src="img/header/Logo.png" alt="img/header/Logo.png" />
+              </a>
+              <img class="header-icons__bar" id="header-icons__bar" src="img/icon/bar.png" alt="img/icon/close.png">
+              <img class="header-icons__cls" id="header-icons__cls" src="img/icon/close.png" alt="img/icon/close.png">
+            </div>
+            <div class="header__menu" id="header__menu">
+              <nav class="header-nav" id="header-nav">
+                <a class="header-nav__link" href="http://victoryeratravel.local/">Home</a>
+                <div class="header-nav__group">
+                  <a class="header-nav__link header-nav__link--down" href="#">Tours in Vietnam</a>
+                  <nav class="header-nav__sub">
+                    <a class="header-nav__link" href="http://victoryeratravel.local/?s=&c=vietnam-package">Vietname Package</a>
+                    <div class="header-nav__group">
+                      <a class="header-nav__link header-nav__link--right" href="#">Tours in Ha Long</a>
+                      <nav class="header-nav__sub-right">
+                        <a class="header-nav__link" href="http://victoryeratravel.local/?s=&c=halong-day-cruise">Halong Day Cruises</a>
+                        <a class="header-nav__link" href="http://victoryeratravel.local/?s=&c=halong-2n1d">Halong Overnight Cruises</a>
+                      </nav>
+                    </div>
+                    <a class="header-nav__link" href="http://victoryeratravel.local/?s=&c=southern-vietnam">Southen Tours</a>
+                    <a class="header-nav__link" href="http://victoryeratravel.local/?s=&c=northern-vietnam">Northern Tours</a>
+                    <a class="header-nav__link" href="http://victoryeratravel.local/?s=&c=central-vietnam">Central Tours</a>
+                  </nav>
+                </div>
+                <a class="header-nav__link" href="http://victoryeratravel.local/?cat=16">Travel Guide</a>
+                <a class="header-nav__link" href="http://victoryeratravel.local/?cat=14">Booking Policy</a>
+                <a class="header-nav__link" href="http://victoryeratravel.local/?cat=15">Services</a>
+                <a class="header-nav__link" href="http://victoryeratravel.local/?p=45">About Us</a>
+              </nav>
+              <form class="header-search" action="http://victoryeratravel.local/">
+                <input class="header-search__input" name="s" value="" type="text" placeholder="Where do you want to go?">
+                <button class="header-search__btn">
+                  <img class="header-search__icon" src="img/header/search-icon.png" alt="search-icon.png">
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="body">
+        <div class="container">
+          <div class="breadcrumb">
+            <a class="breadcrumb__link" href="http://victoryeratravel.local/" title="Home">Home</a>
+            <span class="s">/</span>
+            <a class="breadcrumb__link" href="http://victoryeratravel.local/?s=" title="Home">Tour in Vietnam</a>
+            <span class="s">/</span>
+            <a class="breadcrumb__link" href="#" title="Halong Bay Tours">Premium Day Tour: Hoa Lu- Tam Coc/Trang An- Mua Cave</a>
+          </div>
+          <div class="booking">
+            <div class="booking-header">
+              <h1 class="booking-header__title" id="booking-header__title">Booking Form</h1>
+              <p class="booking-header__text">A comprehensive form that can be used for online booking reservations, transportation planning, tours, pickups; with widgets that allow collecting any ...</p>
+            </div>
+            <div class="booking__body">
+              <form class="booking-form" id="booking-form" action="http://victoryeratravel.local/wp-content/themes/main/booking-submit.php">
+                <input type="hidden" name="tour_name" value="Premium Day Tour: Hoa Lu- Tam Coc/Trang An- Mua Cave">
+                <input type="hidden" name="tour_price" value="$ 45/ Peson">
+                <label class="booking-form__label booking-form__label--detail">Details</label>
+                <div class="booking-form__flex">
+                  <div class="booking-form__group validate">
+                    <label class="booking-form__label">First Name</label>
+                    <input type="text" class="booking-form__input" id="booking-form__input--firstname" name="firstname" placeholder="Input your first name here">
+                    <small class="error-message"></small>
+                  </div>
+                  <div class="booking-form__group validate">
+                    <label class="booking-form__label">Last Name</label>
+                    <input type="text" class="booking-form__input" id="booking-form__input--lastname" name="lastname" placeholder="Input your last name here">
+                    <small class="error-message"></small>
+                  </div>
+                </div>
+                <div class="booking-form__flex">
+                  <div class="booking-form__group validate">
+                    <label class="booking-form__label">Email Address</label>
+                    <input type="text" class="booking-form__input" id="booking-form__input--email" name="email" placeholder="Input your email address here">
+                    <small class="error-message"></small>
+                  </div>
+                  <div class="booking-form__group validate">
+                    <label class="booking-form__label">Phone Number</label>
+                    <input type="text" class="booking-form__input" name="phone_number" placeholder="Input your phone number here">
+                  </div>
+                </div>
+                <div class="booking-form__flex">
+                  <div class="booking-form__group validate">
+                    <label class="booking-form__label">Number of Aldults</label>
+                    <input type="number" class="booking-form__input" name="number_adult" placeholder="Input Number of aldults here">
+                  </div>
+                  <div class="booking-form__group validate">
+                    <label class="booking-form__label">Number of Children</label>
+                    <input type="number" class="booking-form__input" name="number_children" placeholder="Input Number of Children here">
+                  </div>
+                  <div class="booking-form__group validate">
+                    <label class="booking-form__label">Departure date</label>
+                    <input type="date" class="booking-form__input" name="departure_date" placeholder="Input your departure date here">
+                  </div>
+                </div>
+                <div class="booking-form__group">
+                  <label class="booking-form__label">Special Request</label>
+                  <textarea rows="3" class="booking-form__textarea" name="special_request" placeholder="Input your special request here"></textarea>
+                </div>
+                <button class="booking-form__submit">Next</button>
+              </form>
+              <div class="booking-product">
+                <div class="card card--border">
+                  <a href="http://victoryeratravel.local/?product=hoa-lu-tam-coc-trang-an-full-day" class="card__frame" style="background-image: url('http://victoryeratravel.local/wp-content/uploads/2024/05/hn5.jpeg');"></a>
+                  <a href="http://victoryeratravel.local/?product=hoa-lu-tam-coc-trang-an-full-day" class="card__title"> Premium Day Tour: Hoa Lu- Tam Coc/Trang An- Mua Cave </a>
+                  <div class="card__info">
+                    <div class="card-price">
+                      <label class="card-price__label">Price</label>
+                      <span class="card-price__value">$ 45/ Peson</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="js/function.js"></script>
+      <script>
+        Validator({
+          form: '#booking-form',
+          rules: [
+            Validator.tbRequired({
+              selector: '#booking-form__input--firstname',
+              submit: true
+            }),
+            Validator.tbRequired({
+              selector: '#booking-form__input--lastname',
+              submit: true
+            }),
+            Validator.tbRequired({
+              selector: '#booking-form__input--email',
+              submit: true
+            })
+          ],
+          onSubmit: (data) => {
+            document.getElementById("modal__loading").style.display = "block";
+            data.form.submit();
+          }
+        });
+      </script>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-map">
+            <iframe class="footer-map__iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Vinhome%20ocearn%20park+(Victory%20Era%20Travel%20Company)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+              <a href="https://www.gps.ie/">gps trackers</a>
+            </iframe>
+            <p class="footer__text text-center">Copyright © 2024 Victory Era Travel Company</p>
+          </div>
+          <div class="footer-info">
+            <div class="footer-info__company">
+              <h3 class="footer-info__h3">Victory Era Travel Company</h3>
+              <p class="footer__text">Address: 2nd Floor, 02SH08 - S101 Building, Vinhomes Ocean Park, Gia Lam, Ha Noi</p>
+            </div>
+            <section class="footer__links">
+              <nav class="footer-nav">
+                <a href="#" class="footer-nav__link">Hotline: +84867032865</a>
+                <a href="#" class="footer-nav__link">Email: booking@victorytravel.info</a>
+                <a href="#" class="footer-nav__link">Work Time: Mon-Sun 8:00 - 21:00</a>
+                <div class="footer__social">
+                  <a href="#">
+                    <img class="footer__social-item" src="img/footer/social1.png" alt="social1.png">
+                  </a>
+                  <a href="#">
+                    <img class="footer__social-item" src="img/footer/social2.png" alt="social2.png">
+                  </a>
+                  <a href="#">
+                    <img class="footer__social-item" src="img/footer/social3.png" alt="social3.png">
+                  </a>
+                  <a href="#">
+                    <img class="footer__social-item" src="img/footer/social4.png" alt="social4.png">
+                  </a>
+                  <a href="#">
+                    <img class="footer__social-item" src="img/footer/social5.png" alt="social5.png">
+                  </a>
+                </div>
+              </nav>
+              <nav class="footer-nav">
+                <a href="http://victoryeratravel.local/?s=&c=vietnam-package" class="footer-nav__link footer-nav__link--hover">Vietnam package</a>
+                <a href="http://victoryeratravel.local/?s=&c=northern-vietnam" class="footer-nav__link footer-nav__link--hover">Northern Vietnam</a>
+                <a href="http://victoryeratravel.local/?s=&c=central-vietnam" class="footer-nav__link footer-nav__link--hover">Central Vietnam</a>
+                <a href="http://victoryeratravel.local/?s=&c=southern-vietnam" class="footer-nav__link footer-nav__link--hover">Southern Vietnam</a>
+              </nav>
+              <nav class="footer-nav">
+                <a href="http://victoryeratravel.local/" class="footer-nav__link footer-nav__link--hover">Home</a>
+                <a href="http://victoryeratravel.local/?p=45" class="footer-nav__link footer-nav__link--hover">About Us</a>
+                <a href="http://victoryeratravel.local/?p=49" class="footer-nav__link footer-nav__link--hover">Travel Guide</a>
+                <a href="http://victoryeratravel.local/?p=47" class="footer-nav__link footer-nav__link--hover">Booking Policy</a>
+              </nav>
+            </section>
+            <section class="footer-payment">
+              <img class="footer-payment__item" src="img/footer/payment1.png" alt="payment1.png">
+              <img class="footer-payment__item" src="img/footer/payment2.png" alt="payment2.png">
+              <img class="footer-payment__item" src="img/footer/payment3.png" alt="payment3.png">
+              <img class="footer-payment__item" src="img/footer/payment4.png" alt="payment4.png">
+            </section>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <ul id="ft-contact-icons" class="active contact-icons-right">
+      <li class="icon-zalo">
+        <a target="_blank" href="https://zalo.me/+84867032865">
+          <span class="icon"></span>
+        </a>
+      </li>
+      <li class="icon-whatsup">
+        <a href="https://wa.me/+84867032865" target="_blank">
+          <span class="icon">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+          </span>
+        </a>
+      </li>
+      <li class="icon-call">
+        <a href="tel:+84395785007" target="_blank">
+          <span class="icon">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+    <!-- Modal loading page -->
+    <div class="modal" id="modal__loading">
+      <div class="modal__overlay"></div>
+      <div class="modal__content modal__content--loading">
+        <div class="loader"></div>
+        <div class="loading__title">Processing ... <br>Please do not close the browser </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper.js"></script>
+    <script src="js/swiper-config.js"></script>
+  </body>
+</html>

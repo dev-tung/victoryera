@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <title>Victory Era Travel Company</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/define.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .search-filter{
+        height: 80px;
+        background-color: white;
+        padding: 0 30px;
+        margin-top: -35px;
+        margin-bottom: 60px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        gap: 30px;
+      }
+
+      .search-filter__search{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border: 1px solid var(--cl_b);
+        background-color: white;
+        border-radius: 5px;
+        padding-right: 10px;
+      }
+
+      .search-filter-select-group{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+
+
+      .search-filter__search-input{
+        height: 35px;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 5px;
+      }
+
+      .search-filter__search-icon{
+        -webkit-filter: invert(60%);
+        filter: invert(60%);
+      }
+
+      .search-filter-select{
+        display: flex;
+        gap: 30px;
+      }
+
+      .search-filter-select-label{
+        width: max-content;
+        color: rgb(104, 103, 103);
+      }
+
+      .search-filter-selectbox{
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        height: 35px;
+        cursor: pointer;
+        border: 1px solid var(--cl_b);
+        border-radius: 5px;
+      }
+
+      @media (max-width: 1200px) {
+        .search-filter-select-group{
+          display: flex;
+          gap: 1px;
+          flex-direction: column;
+          align-items: start;
+        }
+        
+        .search-filter-selectbox{
+          height: 30px;
+          border: none;
+          background-color: #f5f5f5;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .search-filter{
+          flex-direction: column;
+          gap: 15px;
+          align-items: start;
+          padding: 15px;
+          margin-bottom: 90px;
+          border: 1px solid var(--cl_b);
+          height: fit-content;
+        }
+
+        .search-filter__search{
+          width: 100%;
+        }
+
+        .search-filter-selectbox{
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .pagination{
+        width: fit-content;
+        margin: 0 auto 60px;
+        display: flex;
+        gap: 15px;
+      }
+
+      .pagination-item{
+        text-decoration: none;
+        /* border: 1px solid var(--cl_1); */
+        background-color: rgb(240, 240, 240);
+        display: block;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        color: black;
+      }
+
+      .pagination-item:hover{
+        background-color: rgba(218, 218, 218, 0.747);
+      }
+
+      .pagination-item--active{
+        background-color: var(--cl_1);
+        color: white;
+      }
+
+      .pagination-item--dot{
+        background-color: white;
+      }
+
+      .pagination-item img{
+        width: 35px;
+        height: 35px;
+      }
+
+      .pagination-item--previous,
+      .pagination-item--next{
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="web">
+      <header class="header" id="header">
+        <div class="container">
+          <div class="header__top">
+            <div class="header-icons">
+              <img class="header-icons__logo" src="img/header/Logo.png" alt="img/header/Logo.png"/>
+              <img class="header-icons__bar" id="header-icons__bar" src="img/icon/bar.png" alt="img/icon/close.png">
+              <img class="header-icons__cls" id="header-icons__cls" src="img/icon/close.png" alt="img/icon/close.png">
+            </div>
+            <div class="header__menu" id="header__menu">
+              <nav class="header-nav" id="header-nav">
+                <a class="header-nav__link header-nav__link--active" href="#">Home</a>
+                <div class="header-nav__group">
+                  <a class="header-nav__link header-nav__link--down" href="#">Tours in Vietnam</a>
+                  <nav class="header-nav__sub">
+                    <a class="header-nav__link" href="#">Vietname Package</a>
+                    <a class="header-nav__link" href="#">Southen Tour</a>
+
+                    <div class="header-nav__group">
+                      <a class="header-nav__link header-nav__link--right" href="#">Tour in Ha Long</a>
+                      <nav class="header-nav__sub-right">
+                        <a class="header-nav__link" href="#">Tour one day</a>
+                        <a class="header-nav__link" href="#">Tour 2 nights one day</a>
+                      </nav>
+                    </div>
+                    <a class="header-nav__link" href="#">Nothern Tour</a>
+                    <a class="header-nav__link" href="#">Central Tour</a>
+                  </nav>
+                </div>
+
+                <a class="header-nav__link" href="#">Travel Guide</a>
+                <a class="header-nav__link" href="#">Booking Policy</a>
+                <a class="header-nav__link" href="#">Hotline +84867032865</a>
+              </nav>
+              <form class="header-search">
+                <input class="header-search__input" type="text" placeholder="Where do you want to go?">
+                <img class="header-search__icon" src="img/header/search-icon.png" alt="search-icon.png">
+              </form>
+            </div>
+          </div>
+          <div class="header-banner">
+            <h1 class="header-banner__title">Victory Era Travel Company</h1>
+            <p class="header-banner__text">Your journey - Our mision</p>
+          </div>
+        </div>
+      </header>
+      
+      <div class="container">
+        <form class="search-filter">
+          <div class="search-filter__search">
+            <input class="search-filter__search-input" type="text" placeholder="Where do you want to go?">
+            <img class="search-filter__search-icon" src="img/header/search-icon.png" alt="search-filter__search-icon">
+          </div>
+          <div class="search-filter-select">
+              <div class="search-filter-select-group">
+              <label class="search-filter-select-label" for="search-filter-selectbox--tour">Tour in Vietnam</label>
+              <select class="search-filter-selectbox" name="" id="search-filter-selectbox--tour">
+                <option class="search-filter-selectoption" value="All">All tour</option>
+                <option class="search-filter-selectoption" value="Vietname Package">Vietname Package</option>
+                <option class="search-filter-selectoption" value="Vietname Package">Vietname Package</option>
+                <option class="search-filter-selectoption" value="Vietname Package">Vietname Package</option>
+              </select>
+            </div>
+            <div class="search-filter-select-group">
+              <label class="search-filter-select-label" for="search-filter-selectbox--price">Price</label>
+              <select class="search-filter-selectbox" name="" id="search-filter-selectbox--price">
+                <option class="search-filter-selectoption" value="All">All price</option>
+                <option class="search-filter-selectoption" value="Vietname Package">$370</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="body">
+        <section class="section">
+          <div class="container">
+            <h2 class="section__title">VIETNAM PACKAGE</h2>
+            <div class="grid__four">
+              <div class="card card--border">
+                <div class="card__frame">
+                  <img class="card__thumnail" src="img/product/product-thumnail.png" alt="product-thumnail.png">
+                </div>
+                <a class="card__title">Vietnam Package - 7 days 6 nights</a>
+                <div class="card__info">
+                  <a class="btn btn--primary" href="#">Book Tour</a>
+                  <div class="card-price">
+                    <label class="card-price__label">Start From</label>
+                    <span class="card-price__value">$370</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card card--border">
+                <div class="card__frame">
+                  <img class="card__thumnail" src="img/product/product-thumnail.png" alt="product-thumnail.png">
+                </div>
+                <a class="card__title">Vietnam Package - 7 days 6 nights</a>
+                <div class="card__info">
+                  <a class="btn btn--primary" href="#">Book Tour</a>
+                  <div class="card-price">
+                    <label class="card-price__label">Start From</label>
+                    <span class="card-price__value">$370</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card card--border">
+                <div class="card__frame">
+                  <img class="card__thumnail" src="img/product/product-thumnail.png" alt="product-thumnail.png">
+                </div>
+                <a class="card__title">Vietnam Package - 7 days 6 nights</a>
+                <div class="card__info">
+                  <a class="btn btn--primary" href="#">Book Tour</a>
+                  <div class="card-price">
+                    <label class="card-price__label">Start From</label>
+                    <span class="card-price__value">$370</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card card--border">
+                <div class="card__frame">
+                  <img class="card__thumnail" src="img/product/product-thumnail.png" alt="product-thumnail.png">
+                </div>
+                <a class="card__title">Vietnam Package - 7 days 6 nights</a>
+                <div class="card__info">
+                  <a class="btn btn--primary" href="#">Book Tour</a>
+                  <div class="card-price">
+                    <label class="card-price__label">Start From</label>
+                    <span class="card-price__value">$370</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card card--border">
+                <div class="card__frame">
+                  <img class="card__thumnail" src="img/product/product-thumnail.png" alt="product-thumnail.png">
+                </div>
+                <a class="card__title">Vietnam Package - 7 days 6 nights</a>
+                <div class="card__info">
+                  <a class="btn btn--primary" href="#">Book Tour</a>
+                  <div class="card-price">
+                    <label class="card-price__label">Start From</label>
+                    <span class="card-price__value">$370</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card card--border">
+                <div class="card__frame">
+                  <img class="card__thumnail" src="img/product/product-thumnail.png" alt="product-thumnail.png">
+                </div>
+                <a class="card__title">Vietnam Package - 7 days 6 nights</a>
+                <div class="card__info">
+                  <a class="btn btn--primary" href="#">Book Tour</a>
+                  <div class="card-price">
+                    <label class="card-price__label">Start From</label>
+                    <span class="card-price__value">$370</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card card--border">
+                <div class="card__frame">
+                  <img class="card__thumnail" src="img/product/product-thumnail.png" alt="product-thumnail.png">
+                </div>
+                <a class="card__title">Vietnam Package - 7 days 6 nights Lorem ipsum dolor sit amet Lorem, ipsum dolor sit amet consectetur adipisicing elit..</a>
+                <div class="card__info">
+                  <a class="btn btn--primary" href="#">Book Tour</a>
+                  <div class="card-price">
+                    <label class="card-price__label">Start From</label>
+                    <span class="card-price__value">$370</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card card--border">
+                <div class="card__frame">
+                  <img class="card__thumnail" src="img/product/product-thumnail.png" alt="product-thumnail.png">
+                </div>
+                <a class="card__title">Vietnam Package - 7 days 6 nights</a>
+                <div class="card__info">
+                  <a class="btn btn--primary" href="#">Book Tour</a>
+                  <div class="card-price">
+                    <label class="card-price__label">Start From</label>
+                    <span class="card-price__value">$370</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- container -->
+        </section>
+      </div>
+
+      <div class="container">
+        <nav class="pagination">
+          <a href="" class="pagination-item pagination-item--previous"><img src="img/slide/previous.png" alt="previous.png"></a>
+          <a href="" class="pagination-item">1</a>
+          <a href="" class="pagination-item pagination-item--active">2</a>
+          <a href="" class="pagination-item pagination-item--dot">...</a>
+          <a href="" class="pagination-item">4</a>
+          <a href="" class="pagination-item pagination-item--next"><img src="img/slide/next.png" alt="next.png"></a>
+        </nav>
+      </div>
+      
+      <footer class="footer">
+        <div class="container">
+
+          <div class="footer-map">
+            <iframe class="footer-map__iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Vinhome%20ocearn%20park+(Victory%20Era%20Travel%20Company)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+              <a href="https://www.gps.ie/">gps trackers</a>
+            </iframe>
+            <p class="footer__text text-center">Copyright © 2024 Victory Era Travel Company</p>
+          </div>
+  
+          <div class="footer-info">
+            <div class="footer-info__company">
+              <h3 class="footer-info__h3">Victory Era Travel Company</h3>
+              <p class="footer__text">Address: Vinhomes Ocean Park, Gia Lâm, Hanoi Lorem ipsum dolor sit amet.</p>
+            </div>
+            <section class="footer__links">
+              <nav class="footer-nav">
+                <a href="#" class="footer-nav__link">Phone: +84867032865</a>
+                <a href="#" class="footer-nav__link">Email: booking@victorytravel.info</a>
+                <a href="#" class="footer-nav__link">Work Time: Mon-Sun 8:00 - 21:00</a>
+                <div class="footer__social">
+                  <a href="#"><img class="footer__social-item" src="img/footer/social1.png" alt="social1.png"></a>
+                  <a href="#"><img class="footer__social-item" src="img/footer/social2.png" alt="social2.png"></a>
+                  <a href="#"><img class="footer__social-item" src="img/footer/social3.png" alt="social3.png"></a>
+                  <a href="#"><img class="footer__social-item" src="img/footer/social4.png" alt="social4.png"></a>
+                  <a href="#"><img class="footer__social-item" src="img/footer/social5.png" alt="social5.png"></a>
+                </div>
+              </nav>
+              <nav class="footer-nav">
+                <a href="#" class="footer-nav__link">Vietnam package</a>
+                <a href="#" class="footer-nav__link">Northern Vietnam</a>
+                <a href="#" class="footer-nav__link">Central Vietnam</a>
+                <a href="#" class="footer-nav__link">Southern Vietnam</a>
+              </nav>
+              <nav class="footer-nav">
+                <a href="#" class="footer-nav__link">Home</a>
+                <a href="#" class="footer-nav__link">About Us</a>
+                <a href="#" class="footer-nav__link">Travel Guide</a>
+                <a href="#" class="footer-nav__link">Booking Policy</a>
+              </nav>
+            </section>
+            <section class="footer-payment">
+              <img class="footer-payment__item" src="img/footer/payment1.png" alt="payment1.png">
+              <img class="footer-payment__item" src="img/footer/payment2.png" alt="payment2.png">
+              <img class="footer-payment__item" src="img/footer/payment3.png" alt="payment3.png">
+              <img class="footer-payment__item" src="img/footer/payment4.png" alt="payment4.png">
+            </section>
+          </div>
+        </div>
+
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

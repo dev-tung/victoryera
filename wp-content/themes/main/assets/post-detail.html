@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <title>Victory Era Travel Company</title>
+
+    
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/define.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .post{
+        margin: 60px 0;
+      }
+
+      .post-header__title{
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .post-header__text{
+        color: rgb(128, 128, 128);
+        margin-top: 30px;
+      }
+
+      .post__body{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .post-form{
+        padding: 30px;
+        width: calc(75% - 30px);
+        border: 1px solid var(--cl_b);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .post-form-label{
+        font-weight: bold;
+        display: block;
+      }
+
+      .post-form-label--detail{
+        font-size: 18px;
+      }
+
+      .post-form-group{
+        display: block;
+      }
+
+      .post-form-input{
+        margin-top: 5px;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid rgb(224, 224, 224);
+        padding: 15px;
+        font-size: 14px;
+      }
+
+      .post-form-textarea{
+        margin-top: 5px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid rgb(224, 224, 224);
+        padding: 15px;
+       
+      }
+
+      .post__body .post-form-product{
+        width: 25%;
+        height: fit-content;
+      }
+
+      .post__body .post-form-product .web-grid-product__item{
+        border-radius: 10px;
+      }
+      
+      .post-form-product-date{
+        color: rgb(128, 128, 128);
+      }
+
+      .post-form-submit-btn{
+        width: fit-content;
+        padding: 5px 40px;
+        border: none;
+        border-radius: 5px;
+        height: 40px;
+        background-color: var(--cl_1);
+        color: white;
+        margin: 0 auto;
+        font-size: 16px;
+      }
+
+      .post-form-product-desc{
+        margin-top: 15px;
+      }
+
+      .post-form-product-payment-link{
+        color: var(--cl_1);
+      }
+
+      @media (max-width: 1200px) {
+        .post-form{
+          width: calc(60% - 30px);
+        }
+
+        .post__body .post-form-product{
+          width: 40%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .post__body{
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .post-form{
+          order: 2;
+          width: 100%;
+          padding: 15px;
+        }
+
+        .post__body .post-form-product{
+          order: 1;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="web">
+      <header class="header" id="header">
+        <div class="container">
+          <div class="header__top">
+            <div class="header-icons">
+              <img class="header-icons__logo" src="img/header/Logo.png" alt="img/header/Logo.png"/>
+              <img class="header-icons__bar" id="header-icons__bar" src="img/icon/bar.png" alt="img/icon/close.png">
+              <img class="header-icons__cls" id="header-icons__cls" src="img/icon/close.png" alt="img/icon/close.png">
+            </div>
+            <div class="header__menu" id="header__menu">
+              <nav class="header-nav" id="header-nav">
+                <a class="header-nav__link header-nav__link--active" href="#">Home</a>
+                <div class="header-nav__group">
+                  <a class="header-nav__link" href="#">Tours in Vietnam</a>
+                  <nav class="header-nav__sub">
+                    <a class="header-nav__link" href="#">Vietname Package</a>
+                    <a class="header-nav__link" href="#">Southen Tour</a>
+                    <a class="header-nav__link" href="#">Nothern Tour</a>
+                    <a class="header-nav__link" href="#">Central Tour</a>
+                  </nav>
+                </div>
+                <a class="header-nav__link" href="#">Travel Guide</a>
+                <a class="header-nav__link" href="#">Booking Policy</a>
+                <a class="header-nav__link" href="#">Hotline +84867032865</a>
+              </nav>
+              <form class="header-search">
+                <input class="header-search__input" type="text" placeholder="Where do you want to go?">
+                <img class="header-search__icon" src="img/header/search-icon.png" alt="search-icon.png">
+              </form>
+            </div>
+          </div>
+          <div class="header-banner">
+            <h1 class="header-banner__title">Victory Era Travel Company</h1>
+            <p class="header-banner__text">Your journey - Our mision</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="post">
+          <div class="post-header">
+            <h1 class="post-header__title">About US</h1>
+            <p class="post-header__text">28 May</p>
+          </div>
+          <div class="post__body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur in libero, sed veniam at laudantium. Quis eius eum laborum optio unde, labore quod voluptas distinctio cum exercitationem dignissimos odit minus aspernatur quas ea a voluptatibus quam minima. Magnam facilis explicabo voluptate expedita quos alias quo? Ipsum harum vitae deserunt molestias nostrum, eveniet, facilis officiis mollitia, commodi nesciunt vero excepturi enim. Numquam itaque perspiciatis magni minus asperiores cumque modi deserunt eveniet, rem labore nihil deleniti, fugiat rerum nam molestias pariatur, quas facere? Soluta sequi dolorem officiis deleniti consectetur corporis amet earum officia. Ea accusamus sapiente odio sint sequi atque vel nostrum adipisci saepe, quod animi quos expedita beatae iste est hic dolores, labore distinctio, ducimus rerum? Dolore quia architecto molestias totam odit iure cumque esse facere tempora eligendi harum dolorum, nisi reiciendis! Vero tempore necessitatibus maxime maiores aspernatur officia inventore dolor cumque reiciendis, odio assumenda veniam fugit, natus expedita consequatur? Sit quasi illum atque deserunt omnis, neque unde commodi cumque hic corporis fugit nihil, dolorum dignissimos qui eum! Labore aperiam cupiditate perspiciatis laboriosam, officiis sit exercitationem corporis rem, ea sapiente quia suscipit itaque? Facilis, soluta earum hic libero mollitia in ullam non ratione dignissimos. Ipsa doloribus voluptatem aut ea, cupiditate numquam sunt explicabo rerum maiores dolor pariatur nihil iste repellat? Accusamus aut praesentium cupiditate! Odio quaerat dolor asperiores! Qui nihil illo similique enim accusamus. Quis tempore deleniti velit sit accusantium nemo impedit unde itaque. Dolore qui debitis, incidunt cum quae aspernatur. Necessitatibus, pariatur suscipit, aperiam fuga excepturi quis alias dolor ex obcaecati, quia voluptates autem illum voluptas nesciunt debitis vero sit quasi! Quidem molestiae beatae labore facere blanditiis voluptatem repudiandae, fuga accusantium sit. Minima hic ipsam iusto eius sed rerum! Pariatur accusantium debitis quidem deserunt vitae eveniet sunt tempore, est quos molestiae quo sit excepturi quibusdam reprehenderit eum officiis magni iure dolorum commodi fugiat. Dicta similique modi doloremque eligendi nobis consequatur, reprehenderit enim est atque necessitatibus aliquid exercitationem voluptas quas, alias sit corrupti deserunt laudantium in maiores earum. Natus tempora dolorum repellat repudiandae dicta modi quod distinctio eveniet ex debitis suscipit sapiente voluptas nihil odio ratione, explicabo quisquam cum a facilis eaque atque? Dignissimos quasi officiis, aliquid delectus eligendi minus laudantium at tempora inventore eius, molestiae deleniti atque aliquam ea corrupti. Aliquam, ad corrupti temporibus quasi nihil modi esse eos aspernatur ipsam delectus totam tenetur enim magnam, impedit maiores veniam at! Quam ipsa natus sit unde, expedita facere harum voluptatum necessitatibus, libero doloribus rerum nobis alias? Temporibus incidunt facilis repellat libero inventore aliquid nulla ducimus, laudantium nam omnis ullam quis sapiente at dolore dolores! Reprehenderit quia ex vel odio quasi cumque accusamus, numquam deserunt nulla. Possimus odio non deleniti fugiat odit harum vitae beatae libero, consequatur repudiandae? Ullam quisquam facere totam deleniti ut qui blanditiis placeat, eaque quas velit, tenetur tempore voluptatem. Placeat officia fuga pariatur amet commodi explicabo similique quas inventore soluta quidem consequatur deserunt voluptates, sed saepe neque alias eius, autem delectus excepturi quo blanditiis doloribus eum numquam exercitationem? Excepturi, in odit. Quos aliquid, voluptatum voluptatem error magnam culpa quibusdam sunt earum saepe. Repellat cupiditate mollitia ducimus animi voluptatibus voluptatum consequuntur fugit quisquam et, accusantium inventore nobis corporis tenetur deserunt! Ipsa alias fugiat culpa dolorem numquam repellendus error, vel odio tempora. Quibusdam id possimus quia tenetur? Pariatur, expedita debitis similique temporibus quis fugit blanditiis vitae optio earum nesciunt, fugiat labore. Excepturi, consectetur vel fugiat distinctio possimus dolorum corrupti ratione expedita est, ducimus quasi, minus nihil quibusdam. Illo, at. Ullam aliquid nostrum, eligendi nesciunt harum modi, officia quidem aspernatur, unde id fuga in corporis magni voluptatum ut? Nesciunt tempora ad quis asperiores delectus fugiat accusantium facilis obcaecati veritatis, nulla neque consectetur odio doloribus mollitia nostrum inventore qui facere provident. Quidem, eveniet. Temporibus exercitationem incidunt at rerum minima consequuntur dignissimos optio. Vitae ipsum voluptas alias quibusdam possimus fugiat rerum laboriosam, dicta nemo ipsa libero tempora eius nobis corrupti, nulla quos iste dolores magnam velit quisquam sint quam? Temporibus itaque ratione ipsum, beatae veritatis necessitatibus nisi nemo, accusamus ipsam nihil velit maxime voluptatibus qui exercitationem est facere hic quo consectetur suscipit! Reiciendis, eligendi beatae id veritatis consequatur ex excepturi nihil dolor tempora et numquam doloremque inventore mollitia? Ipsam quos illo facilis odit atque eius velit quae, cumque nemo veritatis possimus ut. Culpa commodi tempora sequi corporis dolorum optio consequuntur sed, dignissimos mollitia, veniam corrupti facilis autem magnam, vel cumque impedit beatae iste soluta? Ut porro autem nemo illum quaerat aspernatur exercitationem, consequuntur odio quod doloribus, corrupti illo! Quasi, impedit! Hic quaerat maxime corrupti ipsum incidunt soluta dicta est, rerum ab, nostrum facere asperiores explicabo impedit necessitatibus suscipit, autem aperiam eos eius dolorum repellat sed eligendi in amet? Accusantium sunt doloribus aspernatur distinctio laboriosam quaerat temporibus, similique obcaecati asperiores consequuntur omnis esse quibusdam vel placeat exercitationem, excepturi, eveniet assumenda repellat dolorem eligendi atque unde quod doloremque voluptas. Sit suscipit alias, eligendi officia quaerat autem inventore at velit facilis doloremque quo, repudiandae perferendis earum voluptatibus omnis dolores. At atque asperiores quod natus, esse molestiae mollitia dignissimos sunt quasi suscipit, voluptatibus nam, minima necessitatibus. Accusamus earum voluptatibus sed quisquam nostrum perspiciatis necessitatibus magnam voluptatum. Beatae dolore repellat nostrum tempora minus nam deserunt quaerat, maxime, reiciendis consequuntur, quibusdam in est earum nihil possimus adipisci. Rem adipisci aliquam voluptatum quas sit iste natus, ipsam corporis velit ducimus quidem nemo quisquam porro perspiciatis facere a iusto aspernatur, eius, corrupti deleniti? Fuga hic minus placeat tempora non expedita neque delectus inventore aut doloremque. Ad perspiciatis mollitia maiores, praesentium nihil unde aliquid explicabo adipisci! Omnis atque veniam dignissimos recusandae culpa, dolorem itaque magni aliquam facilis eveniet ipsum in sit reprehenderit molestiae harum quam quae suscipit quisquam voluptatum velit! Sed a magnam earum atque, quasi error tenetur. Eligendi, nobis enim? Nulla ullam reprehenderit quidem quasi fugiat. Iste culpa suscipit ducimus recusandae, explicabo quod reiciendis provident molestias corrupti architecto ex, quidem inventore nam in, neque sit modi cum natus nisi aut ea totam tempore. Totam aliquid minima enim dicta possimus, molestiae eos, asperiores nihil quam quasi perferendis ab hic veniam sunt sequi perspiciatis fugiat quibusdam! Delectus, dolorem? Qui fugiat odio repudiandae deleniti.
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-map">
+            <iframe class="footer-map__iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Vinhome%20ocearn%20park+(Victory%20Era%20Travel%20Company)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+              <a href="https://www.gps.ie/">gps trackers</a>
+            </iframe>
+            <p class="footer__text text-center">Copyright © 2024 Victory Era Travel Company</p>
+          </div>
+          <div class="footer-info">
+            <div class="footer-info__company">
+              <h3 class="footer-info__h3">Victory Era Travel Company</h3>
+              <p class="footer__text">Address: Vinhomes Ocean Park, Gia Lâm, Hanoi Lorem ipsum dolor sit amet.</p>
+            </div>
+            <section class="footer__links">
+              <nav class="footer-nav">
+                <a href="#" class="footer-nav__link">Phone: +84867032865</a>
+                <a href="#" class="footer-nav__link">Email: booking@victorytravel.info</a>
+                <a href="#" class="footer-nav__link">Work Time: Mon-Sun 8:00 - 21:00</a>
+                <div class="footer__social">
+                  <a href="#"><img class="footer__social-item" src="img/footer/social1.png" alt="social1.png"></a>
+                  <a href="#"><img class="footer__social-item" src="img/footer/social2.png" alt="social2.png"></a>
+                  <a href="#"><img class="footer__social-item" src="img/footer/social3.png" alt="social3.png"></a>
+                  <a href="#"><img class="footer__social-item" src="img/footer/social4.png" alt="social4.png"></a>
+                  <a href="#"><img class="footer__social-item" src="img/footer/social5.png" alt="social5.png"></a>
+                </div>
+              </nav>
+              <nav class="footer-nav">
+                <a href="#" class="footer-nav__link">Vietnam package</a>
+                <a href="#" class="footer-nav__link">Northern Vietnam</a>
+                <a href="#" class="footer-nav__link">Central Vietnam</a>
+                <a href="#" class="footer-nav__link">Southern Vietnam</a>
+              </nav>
+              <nav class="footer-nav">
+                <a href="#" class="footer-nav__link">Home</a>
+                <a href="#" class="footer-nav__link">About Us</a>
+                <a href="#" class="footer-nav__link">Travel Guide</a>
+                <a href="#" class="footer-nav__link">Booking Policy</a>
+              </nav>
+            </section>
+            <section class="footer-payment">
+              <img class="footer-payment__item" src="img/footer/payment1.png" alt="payment1.png">
+              <img class="footer-payment__item" src="img/footer/payment2.png" alt="payment2.png">
+              <img class="footer-payment__item" src="img/footer/payment3.png" alt="payment3.png">
+              <img class="footer-payment__item" src="img/footer/payment4.png" alt="payment4.png">
+            </section>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
