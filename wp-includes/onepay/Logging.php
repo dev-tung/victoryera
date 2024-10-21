@@ -15,24 +15,15 @@ class Logging
         $this->wpdb->insert( 'wp_onepay', $params);
     }
 
-    public function success($params){
-        if( $params['vpc_TxnResponseCode'] != 0 ){
-            echo '<pre>';
-            print_r($params);
-            echo '</pre>';
-            die('There was an error!');
-        }
-        
+    public function response($params){
         $this->wpdb->update( 
             'wp_onepay', 
             array(
-                'vpc_Card' => $params['vpc_Card'],
-                'vpc_CardNum' => $params['vpc_CardNum'],
-                'vpc_CardUid' => $params['vpc_CardUid'],
-                'vpc_TransactionNo' => $params['vpc_TransactionNo'],
+                'vpc_Amount' => $params['vpc_Amount'],
+                'vpc_MerchTxnRef' => $params['vpc_MerchTxnRef'],
+                'vpc_OrderInfo' => $params['vpc_OrderInfo'],
                 'vpc_TxnResponseCode' => $params['vpc_TxnResponseCode'],
-                'vpc_Message' => $params['vpc_Message'],
-                'vpc_PayChannel' => $params['vpc_PayChannel']
+                'vpc_Message' => $params['vpc_Message']
             ), 
             array('vpc_MerchTxnRef' => $params['vpc_MerchTxnRef'])
         );

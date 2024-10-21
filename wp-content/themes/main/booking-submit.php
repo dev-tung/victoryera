@@ -1,6 +1,6 @@
 <?php
-    include_once __DIR__.'/vendor/autoload.php';
-    use PHPMailer\PHPMailer\PHPMailer;
+    // include_once __DIR__.'/vendor/autoload.php';
+    // use PHPMailer\PHPMailer\PHPMailer;
 
     // Send Email
     // if( !empty( $_GET['tour_name'] ) ){

@@ -1,8 +1,8 @@
 <?php
-    // Template Name: Onepay Success
+    // Template Name: Onepay Response
     include_once $_SERVER['DOCUMENT_ROOT'].'/wp-includes'.'/onepay/Logging.php';
     $logging = new Logging();
-    $logging->success($_GET);
+    $logging->response($_GET);
 ?>
 
 <html>
