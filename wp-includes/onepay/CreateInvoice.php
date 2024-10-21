@@ -42,7 +42,7 @@ class CreateInvoice
         // Thêm tham số mới
         $merchantParam['vpc_SecureHash'] = $secureHash;
 
-        // Loggin
+        // Logging
         $logging = new Logging();
         $logging->insert($merchantParam);
 
