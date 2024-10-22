@@ -16,17 +16,21 @@ class Logging
     }
 
     public function response($params){
-        $this->wpdb->update( 
-            'wp_onepay', 
-            array(
-                'vpc_Amount' => $params['vpc_Amount'],
-                'vpc_MerchTxnRef' => $params['vpc_MerchTxnRef'],
-                'vpc_OrderInfo' => $params['vpc_OrderInfo'],
-                'vpc_TxnResponseCode' => $params['vpc_TxnResponseCode'],
-                'vpc_Message' => $params['vpc_Message']
-            ), 
-            array('vpc_MerchTxnRef' => $params['vpc_MerchTxnRef'])
-        );
+        if( isset($params['vpc_MerchTxnRef']) && isset($params['vpc_TxnResponseCode']) ){
+            $this->wpdb->update( 
+                'wp_onepay', 
+                array(
+                    'vpc_Amount' => $params['vpc_Amount'],
+                    'vpc_MerchTxnRef' => $params['vpc_MerchTxnRef'],
+                    'vpc_OrderInfo' => $params['vpc_OrderInfo'],
+                    'vpc_TxnResponseCode' => $params['vpc_TxnResponseCode'],
+                    'vpc_Message' => $params['vpc_Message']
+                ), 
+                array('vpc_MerchTxnRef' => $params['vpc_MerchTxnRef'])
+            );
+        }
+        
+        return $params;
     }
 }
 

@@ -18,16 +18,13 @@
     //     $info .= 'Special request: '.$_GET['special_request'].'<br>';
         
     //     try{
-        
     //         $mail = new PHPMailer();
     //         $mail->CharSet = "utf-8";
     //         $mail->isSMTP();
-            
     //         $mail->Host = 'smtp.gmail.com';
     //         $mail->SMTPAuth = true;
     //         $mail->Username = 'victoryeratravel@gmail.com';
     //         $mail->Password = 'suou mxxf cthl xmpq';
-
     //         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     //         $mail->Port = 587;
     //         $mail->addAddress( 'victoryeratravel@gmail.com' );
@@ -60,9 +57,6 @@
     
     // Khởi tạo đối tượng CreateInvoice
     $invoice = new CreateInvoice($merchantId, $merchantAccessCode, $merchantHashCode);
-    
-    // Gọi hàm cInvoice
-    // $invoice->cInvoice();
     
     // Gọi hàm cInvoice để lấy URL
     $redirectUrl = $invoice->cInvoice($_GET);

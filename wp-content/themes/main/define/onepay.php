@@ -20,10 +20,19 @@ function onepay_data_page() {
     onepay_tran_update();
 
     global $wpdb;
-    $results = $wpdb->get_results("SELECT * FROM wp_onepay");
+    $query = "SELECT * FROM wp_onepay";
+    $codition = !empty( $_GET['vpc_MerchTxnRef'] ) ? " WHERE vpc_MerchTxnRef LIKE '%" . $_GET['vpc_MerchTxnRef']."%'" : "";
+    $results = $wpdb->get_results($query.$codition);
 
     echo '<div class="wrap">';
         echo '<h1 class="wp-heading-inline">Onepay Data</h1>';
+        echo '<form class="search-box" style="margin-top: 15px;" action="#">
+            <label class="screen-reader-text" for="post-search-input">Search Posts:</label>
+            <input type="hidden" name="page" value="onepay-data">
+            <input type="search" id="post-search-input" name="vpc_MerchTxnRef" value="'.$_GET['vpc_MerchTxnRef'].'" placeholder="vpc_MerchTxnRef">
+            <input type="submit" id="search-submit" class="button" value="Search">
+        </formp>';
+
         // echo '<a href="' . admin_url('admin.php?page=onepay-data-add') . '" class="page-title-action">Add New</a>';
         echo '<hr class="wp-header-end">';
 

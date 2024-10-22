@@ -30,8 +30,8 @@ class CreateInvoice
             "vpc_TicketNo" => "192.168.166.149",
             "AgainLink" => $params['again_url'],
             "Title" => "PHP VPC 3-Party",
-            "vpc_Customer_Phone" => "84987654321",
-            "vpc_Customer_Email" => "test@onepay.vn",
+            "vpc_Customer_Phone" => $params['phone_number'],
+            "vpc_Customer_Email" => $params['email'],
             "vpc_Customer_Id" => "test"
         ];
         
